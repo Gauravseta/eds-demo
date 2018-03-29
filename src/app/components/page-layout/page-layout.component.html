@@ -1,0 +1,22 @@
+<div>
+
+    This is top nav
+    <button (click)="logout()">Logout</button>
+</div>
+<div style="display:flex;">
+    <div style="width:100px;height:100%;background-color:cyan;">This is side nav
+        <div>
+            <a routerLink="/members">Members</a>
+        </div>
+        <div>
+            <a routerLink="/members/students">Students</a>
+        </div>
+        <div>
+            <a routerLink="/members/tests">Tests</a>
+        </div>
+        
+    </div>
+    <ng-content>
+
+    </ng-content>
+</div>
