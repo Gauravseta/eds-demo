@@ -5,6 +5,7 @@ import {MemberComponent} from  './pages/members/member.component';
 import {MemberStudentComponent} from  './pages/members-student/member-student.component';
 import {MemberTestComponent} from  './pages/members-test/member-test.component';
 import {AuthGuard} from './services/auth.guard';
+import {SearchTextResolver} from './resolvers/searchtext.resolver';
 const routes: Routes = [
     {
         path:'login', component: LoginComponent
@@ -12,6 +13,9 @@ const routes: Routes = [
     {
         path: 'members', component: MemberComponent,
         canActivate: [AuthGuard]
+        /*resolve :{
+            searchText: SearchTextResolver
+        } */
     },
     {
         path: 'members/students', component: MemberStudentComponent,
@@ -28,7 +32,8 @@ const routes: Routes = [
 
 @NgModule({
     imports:[RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [SearchTextResolver]
 
 })
 export class AppRoutingModule{
