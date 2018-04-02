@@ -1,11 +1,10 @@
-<div>
+<mat-toolbar color="primary">  
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <input type="text" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
+    <button style="position: absolute;right: 0;" (click)="logout()">Logout</button>
+</mat-toolbar>
 
-    This is top nav
-    <button (click)="logout()">Logout</button>
-    <div>
-        <input type="text" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
-    </div>
-</div>
+
 <div style="display:flex;">
     <div style="width:100px;height:100%;background-color:cyan;">This is side nav
         <div>

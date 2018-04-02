@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DemoMaterialModule } from './material/demo.material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageLayoutComponent } from './components/page-layout/page-layout.component';
@@ -26,9 +28,11 @@ import {Router, CanActivate, ActivatedRouteSnapshot} from '@angular/router';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ServicesModule,
-    HttpClientModule
+    HttpClientModule,
+    DemoMaterialModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
