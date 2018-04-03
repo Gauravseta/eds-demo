@@ -1,7 +1,14 @@
 <div class="example-container">
     <mat-toolbar color="primary" style="position:relative;z-index:2">  
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <input type="text" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
+        <mat-form-field>
+            <input type="text" matInput  [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
+            <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{ option }}
+                    </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
         <button style="position: absolute;right: 0;" (click)="logout()">Logout</button>
     </mat-toolbar>
     

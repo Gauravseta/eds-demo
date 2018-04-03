@@ -11,3 +11,18 @@
 .example-sidenav-container {
     flex:1;
 }
+
+.mat-input-element {
+    caret-color: black;
+    color: black;
+    background-color: white;
+    padding: 2px;
+    margin-top: 7px;
+}
+::ng-deep .mat-form-field-underline .mat-form-field-ripple{
+    background-color:transparent;
+}
+
+::ng-deep .mat-form-field-underline{
+    background-color:transparent;
+}
