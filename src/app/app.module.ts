@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoMaterialModule } from './material/demo.material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -30,6 +30,7 @@ import {Router, CanActivate, ActivatedRouteSnapshot} from '@angular/router';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     ServicesModule,
     HttpClientModule,
     DemoMaterialModule
