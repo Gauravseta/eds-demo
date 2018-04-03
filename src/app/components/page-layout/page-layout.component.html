@@ -1,11 +1,26 @@
-<mat-toolbar color="primary">  
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <input type="text" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
-    <button style="position: absolute;right: 0;" (click)="logout()">Logout</button>
-</mat-toolbar>
-
-
-<div style="display:flex;">
+<div class="example-container">
+    <mat-toolbar color="primary" style="position:relative;z-index:2">  
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <input type="text" [(ngModel)]="memberName" (ngModelChange)="changeMember()">
+        <button style="position: absolute;right: 0;" (click)="logout()">Logout</button>
+    </mat-toolbar>
+    
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #snav [mode]="side" [fixedInViewport]="false">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/members">Members</a>
+                <a mat-list-item routerLink="/members/students">Students</a>
+                <a mat-list-item routerLink="/members/tests">Tests</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <ng-content>
+            </ng-content>
+        </mat-sidenav-content>
+        
+    </mat-sidenav-container>
+</div>
+<!-- <div style="display:flex;">
     <div style="width:100px;height:100%;background-color:cyan;">This is side nav
         <div>
             <a routerLink="/members">Members</a>
@@ -21,4 +36,4 @@
     <ng-content>
 
     </ng-content>
-</div>
+</div> -->

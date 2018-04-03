@@ -1,3 +1,16 @@
 <page-layout>
-    <div>This is member student component</div>
+    <div style="padding:40px;">
+        <div *ngIf="memberExist">
+            <mat-card  style="padding:5px;">
+                <mat-card-title>{{member.name}}</mat-card-title>
+                <mat-card-content>{{member.birthday}}</mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="!memberExist">
+            <mat-card  style="padding:5px;">
+                <mat-card-title>Such member do not exist</mat-card-title>
+            </mat-card>
+        </div>
+    </div>
+    
 </page-layout>

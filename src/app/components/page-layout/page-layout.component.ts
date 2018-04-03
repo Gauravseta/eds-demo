@@ -10,6 +10,7 @@ import { AppConstants } from '../../app.constants';
 @Component({
     selector: 'page-layout',
     templateUrl: './page-layout.component.html',
+    styleUrls: ['./page-layout.component.scss']
 })
 export class PageLayoutComponent implements OnInit {
    private memberName: string = '';
@@ -18,6 +19,7 @@ export class PageLayoutComponent implements OnInit {
       let resolveObj: string= this.util.getFromStorage('SEARCH_TEXT') || '';
      
       this.memberName = resolveObj.substring(1,resolveObj.length-1);
+      this.commonService.notifyOther({memberName: this.memberName});
     }
 
     /**

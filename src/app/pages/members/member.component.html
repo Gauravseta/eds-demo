@@ -1,3 +1,7 @@
 <page-layout>
-    <div>This is members page{{memberName}}</div>
+    <div style="padding:40px;">
+        <mat-card *ngFor="let member of filteredMembers" style="margin-top:5px;">
+            <mat-card-title>{{member.name}}</mat-card-title>
+        </mat-card>
+    </div>
 </page-layout>
