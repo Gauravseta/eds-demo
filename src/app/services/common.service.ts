@@ -3,7 +3,7 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class CommonService {
 
-    private notify = new Subject<any>();
+     notify = new Subject<any>();
 
     notifyObservable$ = this.notify.asObservable();
     constructor(){

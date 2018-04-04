@@ -10,11 +10,11 @@ import {MemberService} from '../../services/member.service';
 })
 
 export class MemberTestComponent implements OnInit {
-    private subscription: Subscription;
-    private memberName: string;
-    private members: any;
-    private memberExist: boolean = false;
-    private member: any;
+     subscription: Subscription;
+     memberName: string;
+     members: any;
+     memberExist: boolean = false;
+     member: any;
     constructor(private commonService: CommonService,private memberService: MemberService) {}
 
     ngOnInit() {

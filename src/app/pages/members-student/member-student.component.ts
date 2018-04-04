@@ -11,11 +11,11 @@ import {MemberService} from '../../services/member.service';
 })
 
 export class MemberStudentComponent implements OnInit {
-    private subscription: Subscription;
-    private members: any;
-    private memberName: string;
-    private memberExist: boolean = false;
-    private member: any;
+     subscription: Subscription;
+     members: any;
+     memberName: string;
+     memberExist: boolean = false;
+     member: any;
 
     constructor(private commonService: CommonService,private memberService: MemberService){ }
 

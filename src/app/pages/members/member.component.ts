@@ -10,10 +10,10 @@ import {Router, CanActivate, ActivatedRouteSnapshot, ActivatedRoute} from '@angu
 })
 
 export class MemberComponent implements OnInit {
-    private subscription: Subscription;
-    private memberName: string;
-    private members: any;
-    private filteredMembers: any;
+     subscription: Subscription;
+     memberName: string;
+     members: any;
+     filteredMembers: any;
     constructor(private commonService: CommonService,route: ActivatedRoute,private memberService: MemberService) {
     
     }

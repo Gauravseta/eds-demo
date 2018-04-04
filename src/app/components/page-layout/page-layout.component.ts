@@ -18,11 +18,11 @@ import {Observable} from 'rxjs/Observable';
     styleUrls: ['./page-layout.component.scss']
 })
 export class PageLayoutComponent implements OnInit {
-   private memberName: string = '';
+    memberName: string = '';
    myControl: FormControl = new FormControl();
-   private membersNameList: any;
-   private filteredOptions: Observable<string[]>;
-    constructor(private util: UtilService, private router: Router, private commonService: CommonService, private memberService: MemberService){}
+    membersNameList: any;
+    filteredOptions: Observable<string[]>;
+    constructor(private util: UtilService,private router: Router, private commonService: CommonService, private memberService: MemberService){}
     ngOnInit() {
       let resolveObj: string= this.util.getFromStorage('SEARCH_TEXT') || '';
      
