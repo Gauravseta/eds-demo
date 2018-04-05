@@ -1,0 +1,47 @@
+.page-login {
+    background-color:rgb(250,251,252);
+    height:100%;
+    width:100%;
+    left: 0;
+    top: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:24px;
+    .form-container {
+        display:flex;
+        flex-direction:column;
+        font-size: 22px;
+
+        .eds-label {
+            color: rgb(145,36,120);
+            font-weight: bold;
+        }
+
+        .input {
+            border:1px solid rgb(240,244,247);
+            padding:10px;
+            &.box-email {
+                margin-top:10px;
+            }
+
+            &.box-password {
+                margin-top:10px;
+            }
+        }
+
+        button.login-button {
+            background-color:rgb(150,48,126);
+            padding:10px;
+            border:1px solid rgb(140,26,113);
+            color:white;
+            font-weight:bold;
+            margin-top:10px;
+            border-radius:4px;
+        }
+
+        
+
+        
+    }
+}
