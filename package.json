@@ -1,21 +1,9 @@
 {
-  "name": "ng-universal-heroku-demo",
+  "name": "eds-heroku-demo",
   "version": "0.0.0",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/stephengardner/universal-starter-heroku"
   },
-  "contributors": [
-    "Augie Gardner <opensourceaugie@gmail.com>",
-    "AngularClass <hello@angularclass.com>",
-    "PatrickJS <patrick@angularclass.com>",
-    "Jeff Whelpley <jeff@gethuman.com>",
-    "Jeff Cross <crossj@google.com>",
-    "Mark Pieszak <mpieszak84@gmail.com>",
-    "Jason Jean <jasonjean1993@gmail.com>",
-    "Fabian Wiles <fabian.wiles@gmail.com>"
-  ],
   "scripts": {
     "start:heroku": "node dist/server",
     "postinstall": "npm run build:ssr",
@@ -31,9 +19,6 @@
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
